@@ -32,4 +32,19 @@ import Foundation
 // eg. shoppingList = []
 // eg2. occupations = [:]
 
-
+// Day.003
+// Control Flow
+// if, switch, for-in, while, repeat-while
+// If an optional value is nil, the conditional is FALSE
+//let vegetable = "red pepper"
+//switch vegetable {
+//case "celery":
+//    print("Add some raisins and make ants on a log.")
+//case "cucumber", "watercress":
+//    print("That would make a good tea sandwich")
+//case let x where x.hasSuffix("pepper"):
+//    print("Is it a spicy \(x)?")
+//default:
+//    print("Everything tastes good in soup.")
+//}
+// Ranges can be ..< or ...
