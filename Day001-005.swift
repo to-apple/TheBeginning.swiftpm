@@ -102,3 +102,12 @@ import Foundation
 //let mappedNumbers = number.map({ number in 3 * number })
 //
 //let sortedNumbers = numbers.sorted { $0 > $1 }
+
+// Day.005
+// Objects and Classes
+// Class variables need to be assigned before creation (init)
+// Which can also use deinit when destroyed
+// use override for subclass functions. However, if it doesn't really override the original function it will raise an error
+// Values can have getters and setters using newValue and oldValue
+// willSet and didSet can be used to values outside the initializer
+// If a class object is optional, all the properties are also optional
