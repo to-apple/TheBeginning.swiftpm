@@ -111,3 +111,6 @@ import Foundation
 // Values can have getters and setters using newValue and oldValue
 // willSet and didSet can be used to values outside the initializer
 // If a class object is optional, all the properties are also optional
+
+// Day.006
+// Fighting the Booster shot.
