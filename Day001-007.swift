@@ -114,3 +114,6 @@ import Foundation
 
 // Day.006
 // Fighting the Booster shot.
+
+// Day.007
+// Tired. 
