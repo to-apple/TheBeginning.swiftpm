@@ -117,3 +117,6 @@ import Foundation
 
 // Day.007
 // Tired. 
+
+// Day.008
+// Recovery last day.
