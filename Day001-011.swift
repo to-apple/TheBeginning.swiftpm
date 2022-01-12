@@ -198,3 +198,63 @@ import Foundation
 //        self += 42
 //    }
 //}
+
+// Day.011
+// Error Handling
+
+// You represent errors using any type that adopts the Error protocol
+// Use 'throw' to throw an error and 'throws' to mark a function that can throw an error.
+// If you throw an error in a function, the function returns immediately and the code that called the function handles the error
+
+//enum PrinterError: Error {
+//    case outOfPaper
+//    case noToner
+//    case onFire
+//}
+//
+//func send(job: Int, toPrinter printerName: String) throws -> String {
+//    if printerName == "Never has toner" {
+//        throw PrinterError.noToner
+//    }
+//    
+//    return "Job sent"
+//}
+
+// Use 'do-catch' to handle errors
+// There can be multiple catch statements in this pattern
+
+//do {
+//    let printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
+//    print(printerResponse)
+//} catch PrinterError.onFire {
+//    print("Printer on fire")
+//} catch let printerError as PrinterError {
+//    print("Printer error: \(printerError)")
+//} catch {
+//    print(error)
+//}
+
+// Another way to handle error is to use 'try?'. This converts the result to an optional
+// If the function throws an error, the specific error is discarded and the result is nil.
+// Otherwise the result is an optional containing the value that the function returned
+
+//let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
+//let printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")
+
+// Use 'defer' to write a block of code that's executed after all other code in the function, just before the function returns
+// The code is executed regardless of whether the function throws an error
+// You can use this to write setup and cleanup code next to each other, even though they need to be executed at different times
+
+//var fridgeIsOpen = false
+//var fridgeContent = ["milk", "egg", "leftovers"]
+//
+//func fridgeContains(_ food: String) -> Bool {
+//    fridgeIsOpen = true
+//
+//    defer {
+//        fridgeIsOpen = false
+//    }
+//
+//    let result = fridgeContent.contains(food)
+//    return result
+//}
