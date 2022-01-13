@@ -258,3 +258,6 @@ import Foundation
 //    let result = fridgeContent.contains(food)
 //    return result
 //}
+
+// Day.012
+// Stress
