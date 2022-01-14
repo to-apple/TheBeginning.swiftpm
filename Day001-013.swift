@@ -193,7 +193,7 @@ import Foundation
 //    var simpleDescription: String {
 //        return "The number \(self)"
 //    }
-//    
+//
 //    mutating func adjust() {
 //        self += 42
 //    }
@@ -216,7 +216,7 @@ import Foundation
 //    if printerName == "Never has toner" {
 //        throw PrinterError.noToner
 //    }
-//    
+//
 //    return "Job sent"
 //}
 
@@ -261,3 +261,44 @@ import Foundation
 
 // Day.012
 // Stress
+
+// Day.013
+// Generics
+
+//func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
+//    var result: [Item] = []
+//    for _ in 0..<numberOfTimes {
+//        result.append(item)
+//    }
+//    
+//    return result
+//}
+//
+//makeArray(repeating: "knock", numberOfTimes: 4)
+
+// Generics can be used in functions, methods, classes, enums, and structures
+
+//enum OptionalValue<Wrapped> {
+//    case none
+//    case some(Wrapped)
+//}
+//
+//var possibleInteger: OptionalValue<Int> = .none
+//possibleInteger = .some(100)
+
+// Use 'where' to add requirements
+
+//func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool where T.Element: Equatable, T.Element == U.Element {
+//    for lhsItem in lhs {
+//        for rhsItem in rhs {
+//            if lhsItem == rhsItem {
+//                return true
+//            }
+//        }
+//    }
+//    return false
+//}
+//
+//anyCommonElements([1,2,3], [3])
+
+// Writing <T: Equitable> is the same as writing <T> ... where T: Equitable
